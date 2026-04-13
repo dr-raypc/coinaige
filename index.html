@@ -85,6 +85,7 @@
 
     .nav-links a:hover { color: var(--accent); }
 
+    .nav-links li:last-child a,
     .nav-cta {
       background: linear-gradient(135deg, var(--accent2), var(--accent));
       color: #fff !important;
@@ -94,10 +95,17 @@
       transition: opacity 0.3s, transform 0.2s !important;
     }
 
+    .nav-links li:last-child a:hover,
     .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); color: #fff !important; }
 
     /* ---- HERO ---- */
-    #hero {
+    #how, #features, #astrobot, #financials, #team, #invest, #cta {
+      scroll-margin-top: 80px;
+    }
+
+    nav, nav * {
+      pointer-events: auto;
+    }
       position: relative;
       z-index: 1;
       min-height: 100vh;
@@ -115,6 +123,7 @@
       border-radius: 50%;
       border: 1px solid rgba(0,229,255,0.08);
       animation: spin linear infinite;
+      pointer-events: none;
     }
 
     .hero-orbit:nth-child(1) { width: 500px; height: 500px; animation-duration: 40s; }
@@ -317,6 +326,7 @@
     section {
       position: relative;
       z-index: 1;
+      scroll-margin-top: 80px;
     }
 
     .container {
@@ -1383,8 +1393,8 @@
       <h2 class="section-title">Be First When <em>Astrobot Launches</em></h2>
       <p>Astrobot is currently in beta. Join the waitlist to get early access, founding member pricing, and updates straight to your inbox.</p>
       <div class="hero-buttons">
-        <a href="mailto:hello@coinaige.com" class="btn-primary">Join the Waitlist</a>
-        <a href="mailto:hello@coinaige.com" class="btn-outline">Contact Us</a>
+        <a href="/cdn-cgi/l/email-protection#d1b9b4bdbdbe91b2beb8bfb0b8b6b4ffb2bebc" class="btn-primary">Join the Waitlist</a>
+        <a href="/cdn-cgi/l/email-protection#630b060f0f0c23000c0a0d020a04064d000c0e" class="btn-outline">Contact Us</a>
       </div>
     </div>
   </div>
@@ -1399,7 +1409,7 @@
       <a href="#features">Features</a>
       <a href="#team">Team</a>
       <a href="#invest">Investors</a>
-      <a href="mailto:hello@coinaige.com">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#563e333a3a391635393f38373f31337835393b">Contact</a>
     </div>
     <div class="footer-bottom">
       &copy; 2025 Coinaige. All rights reserved. Cryptocurrency trading involves risk. Past performance does not guarantee future results.
@@ -1407,7 +1417,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ---- STAR FIELD ----
   const canvas = document.getElementById('stars');
   const ctx = canvas.getContext('2d');
@@ -1484,13 +1494,4 @@
     const barProfit = document.createElement('div');
     barProfit.className = 'bar bar-profit';
     barProfit.style.height = '4px';
-    barProfit.title = `Profit: $${d.profit}M`;
-
-    const label = document.createElement('div');
-    label.className = 'bar-label';
-    label.textContent = d.year;
-
-    group.appendChild(barRev);
-    group.appendChild(barProfit);
-    group.appendChild(label);
-    chartEl
+    barProfit.title = `Profit: $${d.prof
